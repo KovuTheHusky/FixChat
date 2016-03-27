@@ -5,7 +5,7 @@ deploy:
   provider: releases
   api_key:
     secure: "HtyIR9zu+abtk4APNhXRwxFWSyeILgSkAk52FzMZAZXDZvHG9drBvV8i5LLxPUg9v/1iFhXe9991dM2/7cOLJOnsqyF7huXtZMKp1iwR5OJO9DjBQSDkAH8WNjIbkOn4/EkdPl/kI5KrHXgR/Thr2T16yP9BqB8Ed20Kl9gwbfM="
-  file-glob: true
+  file_glob: true
   file: "build/libs/FixChat-*.jar"
   skip_cleanup: true
   on:
