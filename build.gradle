@@ -1,7 +1,10 @@
 import org.apache.tools.ant.filters.*
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
+plugins {
+  id 'java'
+  id 'eclipse'
+  id 'idea'
+}
 
 group = 'com.codeski'
 version = '1.4.2-SNAPSHOT'
@@ -27,12 +30,11 @@ processResources {
 }
 
 repositories {
-  mavenCentral()
-  maven { url = 'https://hub.spigotmc.org/nexus/content/groups/public/' }
-  maven { url = 'http://repo.bukkit.org/content/groups/public/' }
-  maven { url = 'http://repo.spongepowered.org/maven/' }
-  maven { url = 'http://repo.mikeprimm.com/' }
-  maven { url = 'http://repo.kitteh.org/content/groups/public/' }
+  maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+  maven { url 'http://repo.bukkit.org/content/groups/public/' }
+  maven { url 'http://repo.spongepowered.org/maven/' }
+  maven { url 'http://repo.mikeprimm.com/' }
+  maven { url 'http://repo.kitteh.org/content/groups/public/' }
 }
 
 dependencies {
