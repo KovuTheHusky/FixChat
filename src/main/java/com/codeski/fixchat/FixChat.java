@@ -2,7 +2,6 @@ package com.codeski.fixchat;
 
 public class FixChat {
     public enum Achievements {
-        // @formatter:off
         ACQUIRE_IRON("Acquire Hardware"),
         BAKE_CAKE("The Lie"),
         BOOKCASE("Librarian"),
@@ -37,7 +36,7 @@ public class FixChat {
         SNIPE_SKELETON("Sniper Duel"),
         SPAWN_WITHER("The Beginning?"),
         THE_END("The End.");
-        // @formatter:on
+
         private final String name;
 
         private Achievements(String name) {
