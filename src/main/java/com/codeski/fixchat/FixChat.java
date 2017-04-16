@@ -50,12 +50,11 @@ public class FixChat {
     }
 
     public enum Strings {
-        // @formatter:off
         AWAY(" is away from keyboard"),
         NO_WHISPER_REPLY("There's no whisper to reply to."),
         NON_PLAYER_REPLY("Non-players cannot respond because they cannot receive whispers."),
         NOT_AWAY(" is no longer away from keyboard");
-        // @formatter:on
+
         private final String name;
 
         private Strings(String name) {
