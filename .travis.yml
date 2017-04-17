@@ -4,9 +4,9 @@ jdk:
 deploy:
   provider: releases
   api_key:
-    secure: "HtyIR9zu+abtk4APNhXRwxFWSyeILgSkAk52FzMZAZXDZvHG9drBvV8i5LLxPUg9v/1iFhXe9991dM2/7cOLJOnsqyF7huXtZMKp1iwR5OJO9DjBQSDkAH8WNjIbkOn4/EkdPl/kI5KrHXgR/Thr2T16yP9BqB8Ed20Kl9gwbfM="
+    secure: "Dq/epvu++7flgRS7J6vrmP3RYlY9UMuSvlRG1ChiIiCn5lDop7nmf/6Wgierg02cOJXGmSFQ3/wiAt1H9W4ERxvn9ausfToMcM/VKcpY5+hZHB6yIKRwvdfLw0MNv4UfvGBysj0cN+Y55PAJSJbG6SB+zF/iHMMfFltVby/aaLQ="
   file_glob: true
-  file: "build/libs/FixChat-*.jar"
+  file: "build/libs/FixChat-*-all.jar"
   skip_cleanup: true
   on:
     tags: true
