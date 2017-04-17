@@ -43,3 +43,5 @@ Operators or users with the appropriate permission can set the message of the da
 * Source: <https://github.com/Codeski/FixChat>
 * Builds: <https://travis-ci.org/Codeski/FixChat>
 * Bukkit: <https://dev.bukkit.org/projects/fixchat>
+* Spigot: <https://www.spigotmc.org/resources/fixchat.39662>
+* Metrics: <https://bstats.org/plugin/bukkit/FixChat>
