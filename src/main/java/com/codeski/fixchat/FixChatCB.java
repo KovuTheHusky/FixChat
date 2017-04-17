@@ -96,25 +96,26 @@ public class FixChatCB extends JavaPlugin implements Listener {
         this.saveConfig();
         server = this.getServer();
         server.getPluginManager().registerEvents(this, this);
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                for (Player p : server.getOnlinePlayers())
-                    if (idle.get(p) != null && !away.contains(p))
-                        if (System.currentTimeMillis() - idle.get(p) > FixChat.AWAY) {
-                            if (Bukkit.getPluginManager().isPluginEnabled("VanishNoPacket")) {
-                                VanishManager vanish = ((VanishPlugin) Bukkit.getPluginManager().getPlugin("VanishNoPacket")).getManager();
-                                if (vanish != null)
-                                    if ((Boolean) new VanishCheck(vanish, p.getName()).call())
-                                        return;
+        if (configuration.getBoolean("afk"))
+            new BukkitRunnable() {
+                @Override
+                public void run() {
+                    for (Player p : server.getOnlinePlayers())
+                        if (idle.get(p) != null && !away.contains(p))
+                            if (System.currentTimeMillis() - idle.get(p) > FixChat.AWAY) {
+                                if (Bukkit.getPluginManager().isPluginEnabled("VanishNoPacket")) {
+                                    VanishManager vanish = ((VanishPlugin) Bukkit.getPluginManager().getPlugin("VanishNoPacket")).getManager();
+                                    if (vanish != null)
+                                        if ((Boolean) new VanishCheck(vanish, p.getName()).call())
+                                            return;
+                                }
+                                away.add(p);
+                                Bukkit.broadcastMessage(ChatColor.YELLOW + p.getName() + Strings.AWAY);
+                                if (Bukkit.getPluginManager().isPluginEnabled("dynmap"))
+                                    ((DynmapCommonAPI) Bukkit.getPluginManager().getPlugin("dynmap")).sendBroadcastToWeb(null, p.getName() + " is away from keyboard.");
                             }
-                            away.add(p);
-                            Bukkit.broadcastMessage(ChatColor.YELLOW + p.getName() + Strings.AWAY);
-                            if (Bukkit.getPluginManager().isPluginEnabled("dynmap"))
-                                ((DynmapCommonAPI) Bukkit.getPluginManager().getPlugin("dynmap")).sendBroadcastToWeb(null, p.getName() + " is away from keyboard.");
-                        }
-            }
-        }.runTaskTimer(this, FixChat.INTERVAL, FixChat.INTERVAL);
+                }
+            }.runTaskTimer(this, FixChat.INTERVAL, FixChat.INTERVAL);
     }
 
     @EventHandler
