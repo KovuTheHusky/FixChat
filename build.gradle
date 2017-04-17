@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.codeski'
-version = '1.4.2-SNAPSHOT'
+version = '1.5.0'
 sourceCompatibility = '1.8'
 
 task filter(type: Copy) {
