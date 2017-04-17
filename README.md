@@ -29,12 +29,19 @@ Operators or users with the appropriate permission can set the message of the da
 
 ## Permissions
 
-* `fixchat.motd` Allows the user to set the message of the day.
+**fixchat.motd**
+
+    Allows the user to set the message of the day.
 
 ## Configuration
 
-* `fixchat.afk` If true, keeps track of whether players are idle and sets them to away after five minutes. 
-* `fixchat.motd` Saves the message of the day so it is not lost between server restarts.
+**fixchat.afk**
+
+    If true, keeps track of whether players are idle and sets them to away after five minutes.
+     
+**fixchat.motd**
+
+    Saves the message of the day so it is not lost between server restarts.
 
 ## Links
 
