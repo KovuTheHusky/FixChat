@@ -40,7 +40,6 @@ dependencies {
 
 repositories {
   maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
-  maven { url 'http://repo.bukkit.org/content/groups/public/' }
   maven { url 'http://repo.bstats.org/content/repositories/releases/' }
   maven { url 'http://repo.spongepowered.org/maven/' }
   maven { url 'http://repo.mikeprimm.com/' }
