@@ -78,11 +78,15 @@ public class FixChatCB extends JavaPlugin implements Listener {
             }
         else if (cmd.getName().equalsIgnoreCase("motd"))
             if (args.length < 1) {
-                sender.sendMessage(ChatColor.RED + "Usage: /" + cmd.getName() + " <message>");
+                sender.sendMessage(ChatColor.RED + "Usage: /" + cmd.getName() + " <message> OR /" + cmd.getName() + " clear");
                 return true;
             } else {
-                configuration.set("motd", Joiner.on(' ').join(args));
+                String motd = Joiner.on(' ').join(args);
+                if (motd.equalsIgnoreCase("clear"))
+                    motd = "";
+                configuration.set("motd", motd);
                 this.saveConfig();
+                sender.sendMessage(Strings.MOTD_UPDATED + "");
                 return true;
             }
         return false;
@@ -172,7 +176,7 @@ public class FixChatCB extends JavaPlugin implements Listener {
                 if (event.getPlayer().hasPermission("minecraft.command.list"))
                     server.dispatchCommand(event.getPlayer(), "list");
                 if (configuration.getString("motd") != null && configuration.getString("motd").length() > 0) {
-                    event.getPlayer().sendMessage("Message of the day:");
+                    event.getPlayer().sendMessage(Strings.MOTD + "");
                     event.getPlayer().sendMessage(configuration.getString("motd"));
                 }
             }

@@ -51,6 +51,8 @@ public class FixChat {
 
     public enum Strings {
         AWAY(" is away from keyboard"),
+        MOTD("Message of the day:"),
+        MOTD_UPDATED("The message of the day has been updated."),
         NO_WHISPER_REPLY("There's no whisper to reply to."),
         NON_PLAYER_REPLY("Non-players cannot respond because they cannot receive whispers."),
         NOT_AWAY(" is no longer away from keyboard");
@@ -69,6 +71,6 @@ public class FixChat {
 
     public static int _MPS = 1000;
     public static int _TPS = 20;
-    public static int AWAY = 300 * _MPS;
+    public static int AWAY = 10 * _MPS;
     public static int INTERVAL = 5 * _TPS;
 }
