@@ -25,7 +25,7 @@ You can also easily reply to the last player you received a whisper from by usin
 
 Operators or users with the appropriate permission can set the message of the day:
 
-* `/motd <message>`
+* `/motd <message> OR /motd clear`
 
 ## Permissions
 
@@ -33,7 +33,8 @@ Operators or users with the appropriate permission can set the message of the da
 
 ## Configuration
 
-At this point there is no configuration needed - just drop it into your plugins directory.
+* `fixchat.afk` If true, keeps track of whether players are idle and sets them to away after five minutes. 
+* `fixchat.motd` Saves the message of the day so it is not lost between server restarts.
 
 ## Links
 
@@ -41,4 +42,4 @@ At this point there is no configuration needed - just drop it into your plugins 
 * Issues: <https://github.com/Codeski/FixChat/issues>
 * Source: <https://github.com/Codeski/FixChat>
 * Builds: <https://travis-ci.org/Codeski/FixChat>
-* Bukkit: <http://dev.bukkit.org/bukkit-plugins/fixchat>
+* Bukkit: <https://dev.bukkit.org/projects/fixchat>
