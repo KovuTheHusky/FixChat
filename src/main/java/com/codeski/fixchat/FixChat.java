@@ -70,5 +70,5 @@ public class FixChat {
     public static int _MPS = 1000;
     public static int _TPS = 20;
     public static int AWAY = 300 * _MPS;
-    public static int INTERVAL = 30 * _TPS;
+    public static int INTERVAL = 5 * _TPS;
 }
