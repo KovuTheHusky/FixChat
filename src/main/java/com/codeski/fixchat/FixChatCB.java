@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
+import org.bstats.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Server;
@@ -94,6 +95,7 @@ public class FixChatCB extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        new Metrics(this);
         this.saveDefaultConfig();
         configuration = this.getConfig();
         configuration.options().copyDefaults(true);

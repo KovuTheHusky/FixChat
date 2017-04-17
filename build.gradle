@@ -4,6 +4,7 @@ plugins {
   id 'java'
   id 'eclipse'
   id 'idea'
+  id 'com.github.johnrengelman.shadow' version '1.2.4'
 }
 
 group = 'com.codeski'
@@ -32,6 +33,7 @@ processResources {
 dependencies {
   compile 'org.bukkit:bukkit:1.9-R0.1-SNAPSHOT'
   compile 'org.spongepowered:spongeapi:4.0.3'
+  compile 'org.bstats:bstats-bukkit:1.1'
   compile 'org.dynmap:DynmapCoreAPI:1.9.4'
   compile 'org.kitteh:VanishNoPacket:3.19.1'
 }
@@ -39,7 +41,17 @@ dependencies {
 repositories {
   maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
   maven { url 'http://repo.bukkit.org/content/groups/public/' }
+  maven { url 'http://repo.bstats.org/content/repositories/releases/' }
   maven { url 'http://repo.spongepowered.org/maven/' }
   maven { url 'http://repo.mikeprimm.com/' }
   maven { url 'http://repo.kitteh.org/content/groups/public/' }
 }
+
+shadowJar {
+  dependencies {
+    include(dependency('org.bstats:bstats-bukkit'))
+  }
+  relocate 'org.bstats', 'com.codeski'
+}
+
+jar.finalizedBy(shadowJar);
