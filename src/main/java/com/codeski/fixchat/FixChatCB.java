@@ -105,10 +105,8 @@ public class FixChatCB extends JavaPlugin implements Listener {
                             if (Bukkit.getPluginManager().isPluginEnabled("VanishNoPacket")) {
                                 VanishManager vanish = ((VanishPlugin) Bukkit.getPluginManager().getPlugin("VanishNoPacket")).getManager();
                                 if (vanish != null)
-                                    if ((Boolean) new VanishCheck(vanish, p.getName()).call()) {
-                                        Bukkit.broadcastMessage("Player is vanished.");
+                                    if ((Boolean) new VanishCheck(vanish, p.getName()).call())
                                         return;
-                                    }
                             }
                             away.add(p);
                             Bukkit.broadcastMessage(ChatColor.YELLOW + p.getName() + Strings.AWAY);
