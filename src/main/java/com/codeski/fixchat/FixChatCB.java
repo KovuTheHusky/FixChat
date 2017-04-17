@@ -35,11 +35,11 @@ import com.codeski.fixchat.FixChat.Strings;
 import com.google.common.base.Joiner;
 
 public class FixChatCB extends JavaPlugin implements Listener {
-    private final ArrayList<Player> away = new ArrayList<Player>();
+    private final ArrayList<Player> away = new ArrayList<>();
     private FileConfiguration configuration;
-    private final HashMap<Player, Long> idle = new HashMap<Player, Long>();
-    private final HashMap<Player, Long> knockback = new HashMap<Player, Long>();
-    private final HashMap<Player, Player> reply = new HashMap<Player, Player>();
+    private final HashMap<Player, Long> idle = new HashMap<>();
+    private final HashMap<Player, Long> knockback = new HashMap<>();
+    private final HashMap<Player, Player> reply = new HashMap<>();
     private Server server;
 
     @Override

@@ -39,7 +39,7 @@ public class FixChat {
 
         private final String name;
 
-        private Achievements(String name) {
+        Achievements(String name) {
             this.name = name;
         }
 
@@ -57,7 +57,7 @@ public class FixChat {
 
         private final String name;
 
-        private Strings(String name) {
+        Strings(String name) {
             this.name = name;
         }
 
