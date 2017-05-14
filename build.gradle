@@ -31,8 +31,7 @@ processResources {
 }
 
 dependencies {
-  compile 'org.bukkit:bukkit:1.9-R0.1-SNAPSHOT'
-  compile 'org.spongepowered:spongeapi:4.0.3'
+  compile 'org.bukkit:bukkit:1.12-pre2-SNAPSHOT'
   compile 'org.bstats:bstats-bukkit:1.1'
   compile 'org.dynmap:DynmapCoreAPI:1.9.4'
   compile 'org.kitteh:VanishNoPacket:3.19.1'
@@ -41,7 +40,6 @@ dependencies {
 repositories {
   maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
   maven { url 'http://repo.bstats.org/content/repositories/releases/' }
-  maven { url 'http://repo.spongepowered.org/maven/' }
   maven { url 'http://repo.mikeprimm.com/' }
   maven { url 'http://repo.kitteh.org/content/groups/public/' }
 }
