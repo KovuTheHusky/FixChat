@@ -35,11 +35,11 @@ Operators or users with the appropriate permission can set the message of the da
 
 ## Configuration
 
-**fixchat.afk**
+**afk**
 
     If true, keeps track of whether players are idle and sets them to away after five minutes.
      
-**fixchat.motd**
+**motd**
 
     Saves the message of the day so it is not lost between server restarts.
 
