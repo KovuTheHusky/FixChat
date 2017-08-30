@@ -1,4 +1,4 @@
-# FixChat [![Build Status](https://travis-ci.org/Codeski/FixChat.svg?branch=master)](https://travis-ci.org/Codeski/FixChat)
+# FixChat [![Build Status](https://travis-ci.org/KovuTheHusky/FixChat.svg?branch=master)](https://travis-ci.org/KovuTheHusky/FixChat)
 
 Simple plugin for Bukkit that makes chatting with your friends in game, and on Dynmap much easier.
 
@@ -45,10 +45,10 @@ Operators or users with the appropriate permission can set the message of the da
 
 ## Links
 
-* Website: <http://codeski.com/#fixchat>
-* Issues: <https://github.com/Codeski/FixChat/issues>
-* Source: <https://github.com/Codeski/FixChat>
-* Builds: <https://travis-ci.org/Codeski/FixChat>
+* Website: <https://kovuthehusky.com/projects#fixchat>
+* Issues: <https://github.com/KovuTheHusky/FixChat/issues>
+* Source: <https://github.com/KovuTheHusky/FixChat>
+* Builds: <https://travis-ci.org/KovuTheHusky/FixChat>
 * Bukkit: <https://dev.bukkit.org/projects/fixchat>
 * Spigot: <https://www.spigotmc.org/resources/fixchat.39662>
 * Metrics: <https://bstats.org/plugin/bukkit/FixChat>
