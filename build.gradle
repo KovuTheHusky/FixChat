@@ -39,7 +39,7 @@ dependencies {
 
 repositories {
   maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
-  maven { url 'http://repo.bstats.org/content/repositories/releases/' }
+  maven { url 'https://repo.bstats.org/content/repositories/releases/' }
   maven { url 'http://repo.mikeprimm.com/' }
   maven { url 'http://repo.kitteh.org/content/groups/public/' }
 }
