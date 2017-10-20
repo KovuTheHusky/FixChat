@@ -7,7 +7,7 @@ plugins {
   id 'com.github.johnrengelman.shadow' version '2.0.1'
 }
 
-group = 'com.codeski'
+group = 'com.kovuthehusky'
 version = '1.6.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -48,7 +48,7 @@ shadowJar {
   dependencies {
     include(dependency('org.bstats:bstats-bukkit'))
   }
-  relocate 'org.bstats', 'com.codeski'
+  relocate 'org.bstats', 'com.kovuthehusky'
 }
 
 jar.finalizedBy(shadowJar);

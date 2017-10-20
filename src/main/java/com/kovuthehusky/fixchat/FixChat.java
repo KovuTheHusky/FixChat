@@ -1,4 +1,4 @@
-package com.codeski.fixchat;
+package com.kovuthehusky.fixchat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
