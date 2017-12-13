@@ -39,10 +39,10 @@ dependencies {
 
 repositories {
   maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+  maven { url 'https://kovuthehusky.com/nexus/content/repositories/kitteh/' }
   maven { url 'https://repo.bstats.org/content/repositories/releases/' }
   maven { url 'http://repo.mikeprimm.com/' }
   maven { url 'http://repo.kitteh.org/content/groups/public/' }
-  maven { url 'https://kovuthehusky.com/nexus/content/repositories/kitteh/' }
 }
 
 shadowJar {
