@@ -1,6 +1,7 @@
 name: FixChat
 main: com.kovuthehusky.fixchat.FixChat
 version: @version@
+api-version: 1.13
 commands:
   whisper:
     description: Send a private message to a player
