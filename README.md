@@ -1,4 +1,4 @@
-# FixChat [![Build Status](https://travis-ci.org/KovuTheHusky/FixChat.svg?branch=master)](https://travis-ci.org/KovuTheHusky/FixChat)
+# FixChat [![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive) [![Build Status](https://travis-ci.org/KovuTheHusky/FixChat.svg?branch=master)](https://travis-ci.org/KovuTheHusky/FixChat)
 
 Simple plugin for Bukkit that makes chatting with your friends in game, and on Dynmap much easier.
 
