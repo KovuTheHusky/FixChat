@@ -33,4 +33,9 @@ commands:
     usage: /motd <message>
     permission: fixchat.motd
     permission-message: You do not have permission.
+  ping:
+    description: Show your current ping to the server.
+    usage: /ping
+    permission: fixchat.ping
+    permission-message: You do not have permission.
 softdepend: [dynmap, VanishNoPacket]

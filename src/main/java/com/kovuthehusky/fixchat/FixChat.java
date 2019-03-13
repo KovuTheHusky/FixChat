@@ -1,5 +1,6 @@
 package com.kovuthehusky.fixchat;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -135,6 +136,7 @@ public class FixChat extends JavaPlugin implements Listener {
     private final HashMap<Player, Long> idle = new HashMap<>();
     private final HashMap<Player, Long> knockback = new HashMap<>();
     private final HashMap<Player, Player> reply = new HashMap<>();
+    private final String bukkitVersion = Bukkit.getServer().getClass().getPackage().getName().substring(23);
     private Server server;
 
     @Override
@@ -184,6 +186,35 @@ public class FixChat extends JavaPlugin implements Listener {
                 sender.sendMessage(Strings.MOTD_UPDATED + "");
                 return true;
             }
+        else if (cmd.getName().equalsIgnoreCase("ping")) {
+            if (!(sender instanceof Player))
+                sender.sendMessage("Non-players cannot ask for their ping to the server.");
+            else
+                try {
+                    Class<?> craftPlayer = Class.forName("org.bukkit.craftbukkit." + bukkitVersion + ".entity.CraftPlayer");
+                    Object handle = craftPlayer.getMethod("getHandle").invoke(sender);
+                    int ping = (int) handle.getClass().getDeclaredField("ping").get(handle);
+                    ChatColor color;
+                    if (ping < 0) {
+                        color = ChatColor.DARK_RED;
+                    } else if (ping < 150) {
+                        color = ChatColor.GREEN;
+                    } else if (ping < 300) {
+                        color = ChatColor.YELLOW;
+                    } else if (ping < 600) {
+                        color = ChatColor.GOLD;
+                    } else if (ping < 1000) {
+                        color = ChatColor.RED;
+                    } else {
+                        color = ChatColor.DARK_RED;
+                    }
+                    sender.sendMessage(ChatColor.RESET + "Your ping is " + color + ping + "ms" + ChatColor.RESET + ".");
+                } catch (ClassNotFoundException | IllegalAccessException | IllegalArgumentException
+                    | InvocationTargetException | NoSuchMethodException | SecurityException | NoSuchFieldException e) {
+                    sender.sendMessage(ChatColor.RESET + "Your ping cannot be determined.");
+                }
+            return true;
+        }
         return false;
     }
 
