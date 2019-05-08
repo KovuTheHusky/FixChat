@@ -48,7 +48,7 @@ Operators or users with the appropriate permission can set the message of the da
 * Website: <https://kovuthehusky.com/projects#fixchat>
 * Issues: <https://github.com/KovuTheHusky/FixChat/issues>
 * Source: <https://github.com/KovuTheHusky/FixChat>
-* Builds: <https://travis-ci.org/KovuTheHusky/FixChat>
+* Builds: <https://travis-ci.com/KovuTheHusky/FixChat>
 * Bukkit: <https://dev.bukkit.org/projects/fixchat>
 * Spigot: <https://www.spigotmc.org/resources/fixchat.39662>
 * Metrics: <https://bstats.org/plugin/bukkit/FixChat>
