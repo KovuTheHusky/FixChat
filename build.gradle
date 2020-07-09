@@ -32,15 +32,14 @@ processResources {
 
 dependencies {
   compile 'org.bukkit:bukkit:1.13-R0.1-SNAPSHOT'
-  compile 'org.bstats:bstats-bukkit:1.1'
+  compile 'org.bstats:bstats-bukkit:1.7'
   compile 'org.dynmap:DynmapCoreAPI:1.9.4'
   compile 'org.kitteh:VanishNoPacket:3.19.1'
 }
 
 repositories {
   maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
-  maven { url 'https://kovuthehusky.com/nexus/content/repositories/kitteh/' }
-  maven { url 'https://repo.bstats.org/content/repositories/releases/' }
+  maven { url 'https://repo.codemc.org/repository/maven-public/' }
   maven { url 'http://repo.mikeprimm.com/' }
   maven { url 'http://repo.kitteh.org/content/groups/public/' }
 }
