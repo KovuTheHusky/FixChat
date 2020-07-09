@@ -220,7 +220,7 @@ public class FixChat extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        new Metrics(this);
+        new Metrics(this, 606);
         this.saveDefaultConfig();
         configuration = this.getConfig();
         configuration.options().copyDefaults(true);
